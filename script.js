@@ -5,9 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
     botaoDeAcessibilidade.addEventListener('click', function (){
         botaoDeAcessibilidade.classList.toggle('rotacao-botao');
         opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
-       })
+    })
     
-    let TamanhoAtualFonte = 1;
+       const alternaContraste = document.getElementById('alterna-contraste')
+
+       alternaContraste.addEventListener('click', function(){
+        document.body.classList.toggle('alto-contraste')
+    })
+       
+        let TamanhoAtualFonte = 1;
     
     const AumentaFonteBotao = document.getElementById('aumentar-fonte');
     const DiminuirFonteBotao = document.getElementById('diminuir-fonte');
